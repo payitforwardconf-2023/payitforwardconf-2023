@@ -11,7 +11,7 @@ export default function Navigator({}: Props) {
     >
       <ul className="flex flex-row gap-8 font-semibold">
         <a href="">
-          <li className="font-extrabold">PAY IT FORWATD CONF.</li>
+          <li className="font-extrabold">PAY IT FORWARD CONF.</li>
         </a>
         <a href="#session-info">
           <li>SESSION INFO</li>
