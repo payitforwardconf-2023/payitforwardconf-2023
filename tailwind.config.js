@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'proxima': ['Proxima Nova', 'Poppins', 'sans-serif'],
+      'pretendard': ['Pretendard', 'Noto Sans KR', 'sans-serif'],
+    }
   },
   plugins: [],
 }

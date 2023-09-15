@@ -1,12 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from 'react'
+import Navigator from './components/Navigator'
 
-function App() {
+type Props = {}
+
+export default function App({}: Props) {
   return (
-    <div className="App">
-      
+    <div>
+      <Navigator />
     </div>
-  );
+  )
 }
-
-export default App;
