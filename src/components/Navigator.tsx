@@ -4,7 +4,11 @@ type Props = {};
 
 export default function Navigator({}: Props) {
   return (
-    <div className="navigator fixed w-full font-proxima flex flex-row items-center justify-between px-4 py-2 bg-white">
+    <div
+      id="navigator"
+      className="hidden fixed w-full font-proxima sm:flex flex-row items-center justify-between
+      px-4 py-2 bg-white sm:visible"
+    >
       <ul className="flex flex-row gap-8 font-semibold">
         <a href="">
           <li className="font-extrabold">PAY IT FORWATD CONF.</li>
