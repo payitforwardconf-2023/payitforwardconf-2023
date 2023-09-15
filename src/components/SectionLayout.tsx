@@ -20,7 +20,7 @@ export default function SectionLayout({
     >
       <div className="flex flex-row justify-between items-start py-10 whitespace-pre-line">
         <h1 className="font-proxima font-extrabold text-5xl">{title}</h1>
-        <h2 className="font-bold text-xl">{subtitle}</h2>
+        <h2 className="font-bold text-xl text-right">{subtitle}</h2>
       </div>
       <div>{children}</div>
     </section>
