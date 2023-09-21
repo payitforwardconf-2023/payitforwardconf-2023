@@ -1,4 +1,4 @@
-[
+export default [
   {
     "id": 0,
     "time": "10:30 - 12:00",

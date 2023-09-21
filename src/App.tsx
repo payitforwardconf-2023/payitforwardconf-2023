@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navigator from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
+import Tab from "./components/Tab";
+import sessionInfo from "./data/session-info";
 
 type Props = {};
 
 export default function App({}: Props) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const changeTab = (nextIndex: number) => {
+    setSelectedIndex(nextIndex);
+  };
+
   return (
     <div id="wrap" className="font-pretendard">
       <Navigator />
@@ -16,7 +24,7 @@ export default function App({}: Props) {
           <div>
             <h1 className="font-proxima font-black text-7xl text-white">
               1<sup>st</sup> SSHS
-              <br/>
+              <br />
               PAY IT FORWARD
               <br />
               CONFERENCE
@@ -26,7 +34,8 @@ export default function App({}: Props) {
             <h2 className="font-proxima font-black text-4xl text-white leading-10">
               2023 OCTOBER 28 (SAT)
               <br />
-              10:00 - 18:00 <span className="font-pretendard">@서울과학고등학교</span>
+              10:00 - 18:00{" "}
+              <span className="font-pretendard">@서울과학고등학교</span>
             </h2>
           </div>
         </div>
@@ -35,7 +44,7 @@ export default function App({}: Props) {
           title={`SESSION\nINFORMATION`}
           subtitle="세션 정보"
         >
-          hello
+          <Tab changeTab={changeTab} json={sessionInfo} />
         </SectionLayout>
         <SectionLayout
           sectionId="time-table"
