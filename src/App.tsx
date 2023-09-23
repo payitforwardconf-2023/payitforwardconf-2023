@@ -31,10 +31,10 @@ export default function App() {
       <div id="container">
         <div
           id="main"
-          className="w-full h-screen bg-violet-50 bg-main bg-cover bg-center flex flex-col justify-between py-32 px-14"
+          className="w-full h-screen bg-violet-50 bg-main bg-cover bg-center flex flex-col justify-between pt-40 pb-24 px-14"
         >
           <div>
-            <h1 className="font-proxima font-black text-7xl text-white">
+            <h1 className="font-proxima font-black text-8xl text-white">
               1<sup>st</sup> SSHS
               <br />
               PAY IT FORWARD
@@ -43,7 +43,7 @@ export default function App() {
             </h1>
           </div>
           <div>
-            <h2 className="font-proxima font-black text-4xl text-white leading-10">
+            <h2 className="font-proxima font-black text-5xl text-white leading-tight">
               2023 OCTOBER 28 (SAT)
               <br />
               10:00 - 18:00{" "}
@@ -58,15 +58,15 @@ export default function App() {
         >
           <Tab changeTab={changeTab} json={sessionInfo} />
           <div className="flex-1">
-            <h4 className="font-proxima text-3xl font-extrabold leading-8 mt-10">
+            <h4 className="font-proxima text-3xl font-extrabold leading-9 mt-10">
               SESSION #{selectedIndex + 1}
               <br />
               {sessionInfo[selectedIndex].title}
             </h4>
-            <p className="text-xl mt-8 whitespace-pre-wrap leading-8 font-bold">
+            <p className="text-xl mt-8 whitespace-pre-wrap leading-9 font-bold">
               {sessionInfo[selectedIndex].description}
             </p>
-            <div className="moderator-container flex flex-row mt-12">
+            <div className="moderator-container flex flex-row mt-14">
               <div className="w-40 font-bold font-proxima">MODERATOR</div>
               <div>
                 <ul className="font-medium">
@@ -76,11 +76,11 @@ export default function App() {
             </div>
             <div className="panels-container flex flex-row mt-6">
               <div className="w-40 font-bold font-proxima">PANELS</div>
-              <ul className="columns-2 font-medium h-[84px]">
+              <ul className="columns-2 font-medium h-[96px]">
                 {sessionInfo[selectedIndex].panels.map(
                   (panel: string, index: number) => {
                     return (
-                      <li key={index} className="leading-7">
+                      <li key={index} className="leading-8 w-64">
                         <div>
                           <span>{panel}</span>
                         </div>
