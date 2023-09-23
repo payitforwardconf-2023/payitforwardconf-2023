@@ -136,7 +136,7 @@ export default function App() {
               frameBorder={0}
               style={{ border: 0 }}
               referrerPolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?q=서울과학고등학교&key=AIzaSyB3LbiXljtm4lzivcwrbRTPZsJ3MEZy2TY"
+              src={`https://www.google.com/maps/embed/v1/place?q=서울과학고등학교&key=${process.env.REACT_APP_GOOGLE_API_KEY}`}
               allowFullScreen
             ></iframe>
             <div className="flex-1 flex flex-col justify-between h-full">
