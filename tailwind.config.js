@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        main: 'url("/public/pay-it-forward-conf-bg-contrast.png")',
+        main: 'url("/public/pay-it-forward-conf-bg-contrast.webp")',
       },
     },
     fontFamily: {
