@@ -53,10 +53,10 @@ export default function App() {
               <br />
               {sessionInfo[selectedIndex].title}
             </h4>
-            <p className="text-lg mt-6 whitespace-pre-wrap leading-7 font-bold">
+            <p className="text-xl mt-8 whitespace-pre-wrap leading-8 font-bold">
               {sessionInfo[selectedIndex].description}
             </p>
-            <div className="moderator-container flex flex-row mt-10">
+            <div className="moderator-container flex flex-row mt-12">
               <div className="w-40 font-bold font-proxima">MODERATOR</div>
               <div>
                 <ul className="font-medium">

@@ -18,7 +18,7 @@ export default function SectionLayout({
       id={sectionId}
       className="flex flex-col max-w-7xl p-12 pt-14 mx-auto my-0"
     >
-      <div className="flex flex-row justify-between items-start py-10 whitespace-pre-line">
+      <div className="flex flex-row justify-between items-start py-12 whitespace-pre-line">
         <h1 className="font-proxima font-extrabold text-5xl">{title}</h1>
         <h2 className="font-bold text-xl text-right">{subtitle}</h2>
       </div>

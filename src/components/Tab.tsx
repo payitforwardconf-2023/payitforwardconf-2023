@@ -19,7 +19,7 @@ export default function Tab({ changeTab, json }: Props) {
         return (
           <div
             key={index}
-            className={classNames("tab cursor-pointer py-2", {
+            className={classNames("tab cursor-pointer pb-2", {
               "text-gray-300": index !== selectedIndex,
               "text-black border-b-2 border-black": index === selectedIndex,
             })}
