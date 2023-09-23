@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import YouTube from "react-youtube";
+
 import Navigator from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
 import Tab from "./components/Tab";
@@ -7,12 +9,20 @@ import Table from "./components/Table";
 import sessionInfo from "./data/session-info";
 import timeTable from "./data/time-table";
 
-
 export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const changeTab = (nextIndex: number) => {
     setSelectedIndex(nextIndex);
+  };
+
+  const isToday = (date: Date) => {
+    const today = new Date();
+    return (
+      date.getFullYear() === today.getFullYear() &&
+      date.getMonth() === today.getMonth() &&
+      date.getDate() === today.getDate()
+    );
   };
 
   return (
@@ -91,10 +101,27 @@ export default function App() {
         </SectionLayout>
         <SectionLayout
           sectionId="live-streaming"
-          title={`YOUTUBE\LIVE STREAMING`}
+          title={`YOUTUBE\nLIVE STREAMING`}
           subtitle={`유튜브\n라이브 스트리밍`}
         >
-          hello
+          <div>
+            {isToday(new Date('2023-10-28')) ? (
+              <YouTube videoId="" opts={
+                {
+                  height: '640',
+                  width: '100%',
+                }
+              } />
+            ) : (
+              <div className="w-full h-[640px] bg-[#3A3033] flex justify-center items-center">
+                <p className="font-medium text-xl text-center text-white leading-8">
+                  PAY IT FORWARD CONFERENCE의 유튜브 라이브 스트리밍은
+                  <br />
+                  행사 당일(2023.10.28) 진행됩니다.
+                </p>
+              </div>
+            )}
+          </div>
         </SectionLayout>
         <SectionLayout
           sectionId="location"
