@@ -105,13 +105,14 @@ export default function App() {
           subtitle={`유튜브\n라이브 스트리밍`}
         >
           <div>
-            {isToday(new Date('2023-10-28')) ? (
-              <YouTube videoId="" opts={
-                {
-                  height: '640',
-                  width: '100%',
-                }
-              } />
+            {isToday(new Date("2023-10-28")) ? (
+              <YouTube
+                videoId=""
+                opts={{
+                  height: "640",
+                  width: "100%",
+                }}
+              />
             ) : (
               <div className="w-full h-[640px] bg-[#3A3033] flex justify-center items-center">
                 <p className="font-medium text-xl text-center text-white leading-8">
@@ -128,7 +129,35 @@ export default function App() {
           title="LOCATION"
           subtitle="위치 정보"
         >
-          hello
+          <div className="w-full h-[600px] flex flex-row gap-8">
+            <iframe
+              width="50%"
+              height="100%"
+              frameBorder={0}
+              style={{ border: 0 }}
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?q=서울과학고등학교&key=AIzaSyB3LbiXljtm4lzivcwrbRTPZsJ3MEZy2TY"
+              allowFullScreen
+            ></iframe>
+            <div className="flex-1 flex flex-col justify-between h-full">
+              <div>
+                <h4 className="text-2xl font-extrabold leading-8">
+                  서울과학고등학교
+                </h4>
+                <p className="text-xl mt-4 whitespace-pre-wrap leading-8 font-medium">
+                  서울특별시 종로구 혜화로 63
+                </p>
+              </div>
+              <button className="w-full text-left bg-[#4287F5] py-3 px-4 font-bold text-lg">
+                <a
+                  href="https://www.google.com/maps/place/%EC%84%9C%EC%9A%B8%EA%B3%BC%ED%95%99%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/data=!3m1!4b1!4m6!3m5!1s0x357cbcd67355bd21:0x9fdac84b29299336!8m2!3d37.5916754!4d126.9982134!16zL20vMDZ4d255?entry=ttu"
+                  target="_blank"
+                >
+                  Google Map에서 보기 →
+                </a>
+              </button>
+            </div>
+          </div>
         </SectionLayout>
       </div>
     </div>
