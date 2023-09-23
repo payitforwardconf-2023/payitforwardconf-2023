@@ -45,6 +45,40 @@ export default function App({}: Props) {
           subtitle="세션 정보"
         >
           <Tab changeTab={changeTab} json={sessionInfo} />
+          <div className="flex-1">
+            <h4 className="font-proxima text-3xl font-extrabold leading-8 mt-10">
+              SESSION #{selectedIndex + 1}
+              <br />
+              {sessionInfo[selectedIndex].title}
+            </h4>
+            <p className="text-lg mt-6 whitespace-pre-wrap leading-7 font-bold">
+              {sessionInfo[selectedIndex].description}
+            </p>
+            <div className="moderator-container flex flex-row mt-10">
+              <div className="w-40 font-bold font-proxima">MODERATOR</div>
+              <div>
+                <ul className="font-medium">
+                  {sessionInfo[selectedIndex].moderator}
+                </ul>
+              </div>
+            </div>
+            <div className="panels-container flex flex-row mt-6">
+              <div className="w-40 font-bold font-proxima">PANELS</div>
+              <ul className="columns-2 font-medium h-[84px]">
+                {sessionInfo[selectedIndex].panels.map(
+                  (panel: string, index: number) => {
+                    return (
+                      <li key={index} className="leading-7">
+                        <div>
+                          <span>{panel}</span>
+                        </div>
+                      </li>
+                    );
+                  }
+                )}
+              </ul>
+            </div>
+          </div>
         </SectionLayout>
         <SectionLayout
           sectionId="time-table"

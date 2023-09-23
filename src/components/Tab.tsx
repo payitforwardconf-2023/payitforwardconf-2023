@@ -27,7 +27,7 @@ export default function Tab({ changeTab, json }: Props) {
               setSelectedIndex(index);
             }}
           >
-            <div className="tab-content font-bold">
+            <div className="tab-content font-bold text-lg">
               <p>{item.time}</p>
               <p className="mt-1">{item.title}</p>
             </div>
