@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import Navigator from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
 import Tab from "./components/Tab";
+import Table from "./components/Table";
+
 import sessionInfo from "./data/session-info";
+import timeTable from "./data/time-table";
 
-type Props = {};
 
-export default function App({}: Props) {
+export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const changeTab = (nextIndex: number) => {
@@ -85,7 +87,7 @@ export default function App({}: Props) {
           title={`TIME TABLE`}
           subtitle="컨퍼런스 일정"
         >
-          hello
+          <Table json={timeTable} />
         </SectionLayout>
         <SectionLayout
           sectionId="live-streaming"
