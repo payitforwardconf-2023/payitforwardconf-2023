@@ -31,7 +31,7 @@ export default function App() {
       <div id="container">
         <div
           id="main"
-          className="relative w-full h-screen bg-stone-500 bg-main bg-cover bg-center sm:bg-right-top md:bg-right-top flex flex-col pt-40 pb-16 px-14 sm:pt-16 sm:pb-8 sm:px-6"
+          className="relative w-full h-screen bg-[#9188A4] bg-main bg-cover bg-center sm:bg-right-top md:bg-right-top flex flex-col pt-40 pb-16 px-14 sm:pt-16 sm:pb-8 sm:px-6"
         >
           <div className="lg:hidden absolute top-0 left-0 bg-black bg-opacity-20 w-full h-full"></div>
           <div className="z-10 font-proxima font-black text-8xl sm:text-5xl text-white lg:flex-1">
