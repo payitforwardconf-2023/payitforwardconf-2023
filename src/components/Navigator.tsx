@@ -6,8 +6,8 @@ export default function Navigator({}: Props) {
   return (
     <div
       id="navigator"
-      className="hidden fixed w-full font-proxima sm:flex flex-row items-center justify-between
-      px-4 py-2 bg-white sm:visible"
+      className="z-50 sm:hidden fixed w-full font-proxima flex flex-row items-center justify-between
+      px-4 py-2 bg-white"
     >
       <ul className="flex flex-row gap-8 font-semibold">
         <a href="">
@@ -30,6 +30,30 @@ export default function Navigator({}: Props) {
           <img src="/sshslogo.jpeg" alt="SSHS LOGO" />
         </a>
       </div>
+    </div>
+  );
+}
+
+export function NavigatorForMobile({}: Props) {
+  return (
+    <div
+      id="navigator"
+      className="w-full font-proxima flex flex-col justify-between text-lg text-white"
+    >
+      <ul className="flex flex-col gap-4 font-extrabold">
+        <a href="#session-info">
+          <li className="flex justify-between border-b-2 border-white p-2">SESSION INFO <span className="font-pretendard">→</span></li>
+        </a>
+        <a href="#time-table">
+          <li className="flex justify-between border-b-2 border-white p-2">TIME TABLE <span className="font-pretendard">→</span></li>
+        </a>
+        <a href="#live-streaming">
+          <li className="flex justify-between border-b-2 border-white p-2">LIVE STREAMING <span className="font-pretendard">→</span></li>
+        </a>
+        <a href="#location">
+          <li className="flex justify-between border-b-2 border-white p-2">LOCATION <span className="font-pretendard">→</span></li>
+        </a>
+      </ul>
     </div>
   );
 }

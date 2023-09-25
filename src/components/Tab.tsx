@@ -29,7 +29,7 @@ export default function Tab({ changeTab, json }: Props) {
           >
             <div className="tab-content font-bold text-lg">
               <p>{item.time}</p>
-              <p className="mt-1">{item.title}</p>
+              <p className="mt-1 hidden lg:block">{item.title}</p>
             </div>
           </div>
         );

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 
-import Navigator from "./components/Navigator";
+import Navigator, { NavigatorForMobile } from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
 import Tab from "./components/Tab";
 import Table from "./components/Table";
@@ -31,10 +31,11 @@ export default function App() {
       <div id="container">
         <div
           id="main"
-          className="w-full h-screen bg-violet-50 bg-main bg-cover bg-center flex flex-col justify-between pt-40 pb-24 px-14"
+          className="relative w-full h-screen bg-stone-500 bg-main bg-cover bg-center sm:bg-right-top md:bg-right-top flex flex-col pt-40 pb-16 px-14 sm:pt-16 sm:pb-8 sm:px-6"
         >
-          <div>
-            <h1 className="font-proxima font-black text-8xl text-white">
+          <div className="lg:hidden absolute top-0 left-0 bg-black bg-opacity-20 w-full h-full"></div>
+          <div className="z-10 font-proxima font-black text-8xl sm:text-5xl text-white lg:flex-1">
+            <h1>
               1<sup>st</sup> SSHS
               <br />
               PAY IT FORWARD
@@ -42,13 +43,33 @@ export default function App() {
               CONFERENCE
             </h1>
           </div>
-          <div>
-            <h2 className="font-proxima font-black text-5xl text-white leading-tight">
+          <div className="z-10 font-proxima font-black text-5xl sm:text-2xl text-white sm:mt-6">
+            <h2 className="leading-tight">
               2023 OCTOBER 28 (SAT)
               <br />
               10:00 - 18:00{" "}
               <span className="font-pretendard">@서울과학고등학교</span>
             </h2>
+          </div>
+          <div className="hidden sm:block sm:flex-1"></div>
+          <div className="z-10 mt-2 hidden sm:block">
+            <NavigatorForMobile />
+          </div>
+          <div className="z-10 self-center mt-8 animate-bounce">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="white"
+              className="w-8 h-8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           </div>
         </div>
         <SectionLayout
@@ -58,25 +79,27 @@ export default function App() {
         >
           <Tab changeTab={changeTab} json={sessionInfo} />
           <div className="flex-1">
-            <h4 className="font-proxima text-3xl font-extrabold leading-9 mt-10">
+            <h4 className="font-proxima text-3xl sm:text-2xl font-extrabold leading-9 sm:leading-7 mt-10">
               SESSION #{selectedIndex + 1}
               <br />
               {sessionInfo[selectedIndex].title}
             </h4>
-            <p className="text-xl mt-8 whitespace-pre-wrap leading-9 font-bold">
+            <p className="text-xl sm:text-lg mt-8 whitespace-pre-wrap leading-9 sm:leading-7 font-bold">
               {sessionInfo[selectedIndex].description}
             </p>
-            <div className="moderator-container flex flex-row mt-14">
-              <div className="w-40 font-bold font-proxima">MODERATOR</div>
+            <div className="moderator-container flex flex-row sm:flex-col mt-14">
+              <div className="w-40 font-bold font-proxima sm:mb-2">
+                MODERATOR
+              </div>
               <div>
                 <ul className="font-medium">
                   {sessionInfo[selectedIndex].moderator}
                 </ul>
               </div>
             </div>
-            <div className="panels-container flex flex-row mt-6">
-              <div className="w-40 font-bold font-proxima">PANELS</div>
-              <ul className="columns-2 font-medium h-[96px]">
+            <div className="panels-container flex flex-row sm:flex-col mt-6">
+              <div className="w-40 font-bold font-proxima sm:mb-2">PANELS</div>
+              <ul className="columns-2 sm:columns-1 font-medium h-[96px] sm:h-fit">
                 {sessionInfo[selectedIndex].panels.map(
                   (panel: string, index: number) => {
                     return (
@@ -109,7 +132,7 @@ export default function App() {
               <YouTube
                 videoId=""
                 opts={{
-                  height: "640",
+                  height: window.innerWidth * 0.5625 + "px",
                   width: "100%",
                 }}
               />
@@ -129,9 +152,9 @@ export default function App() {
           title="LOCATION"
           subtitle="위치 정보"
         >
-          <div className="w-full h-[600px] flex flex-row gap-8">
+          <div className="w-full h-[600px] flex flex-row sm:flex-col gap-8 pb-10">
             <iframe
-              width="50%"
+              width={window.innerWidth < 820 ? "100%" : "50%"}
               height="100%"
               frameBorder={0}
               style={{ border: 0 }}
@@ -144,7 +167,7 @@ export default function App() {
                 <h4 className="text-2xl font-extrabold leading-8">
                   서울과학고등학교
                 </h4>
-                <p className="text-xl mt-4 whitespace-pre-wrap leading-8 font-medium">
+                <p className="text-xl mt-4 sm:mt-2 sm:mb-8 whitespace-pre-wrap leading-8 font-medium">
                   서울특별시 종로구 혜화로 63
                 </p>
               </div>
