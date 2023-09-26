@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import YouTube from "react-youtube";
 
 import Navigator, { NavigatorForMobile } from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
@@ -124,27 +123,16 @@ export default function App() {
         </SectionLayout>
         <SectionLayout
           sectionId="live-streaming"
-          title={`YOUTUBE\nLIVE STREAMING`}
-          subtitle={`유튜브\n라이브 스트리밍`}
+          title={`LIVE STREAMING`}
+          subtitle={`라이브 스트리밍`}
         >
-          <div>
-            {isToday(new Date("2023-10-28")) ? (
-              <YouTube
-                videoId=""
-                opts={{
-                  height: window.innerWidth * 0.5625 + "px",
-                  width: "100%",
-                }}
-              />
-            ) : (
-              <div className="w-full h-[640px] bg-[#3A3033] flex justify-center items-center">
-                <p className="font-medium text-xl text-center text-white leading-8">
-                  PAY IT FORWARD CONFERENCE의 유튜브 라이브 스트리밍은
-                  <br />
-                  행사 당일(2023.10.28) 진행됩니다.
-                </p>
-              </div>
-            )}
+          <div className="">
+            <p className="leading-7 font-medium">
+              PAY IT FORWARD 컨퍼런스의 라이브 스트리밍은 행사
+              당일(2023.10.28.) Zoom을 통해 진행합니다.
+              <br />
+              Zoom 회의실 입장 링크는 참가 신청자 대상으로 추후 안내드릴 예정입니다.
+            </p>
           </div>
         </SectionLayout>
         <SectionLayout
