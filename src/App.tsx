@@ -131,7 +131,7 @@ export default function App() {
               PAY IT FORWARD 컨퍼런스의 라이브 스트리밍은 행사
               당일(2023.10.28.) Zoom을 통해 진행합니다.
               <br />
-              Zoom 회의실 입장 링크는 참가 신청자 대상으로 추후 안내드릴 예정입니다.
+              Zoom 회의실 입장 링크는 참가 신청자 대상으로 추후 이메일을 통해 안내드릴 예정입니다.
             </p>
           </div>
         </SectionLayout>
