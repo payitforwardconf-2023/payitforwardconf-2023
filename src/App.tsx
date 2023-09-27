@@ -4,24 +4,21 @@ import Navigator, { NavigatorForMobile } from "./components/Navigator";
 import SectionLayout from "./components/SectionLayout";
 import Tab from "./components/Tab";
 import Table from "./components/Table";
+import Modal from "./components/Modal";
 
 import sessionInfo from "./data/session-info";
 import timeTable from "./data/time-table";
 
 export default function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [nowSelectedSpeakerId, setNowSelectedSpeakerId] = useState(-1);
 
   const changeTab = (nextIndex: number) => {
     setSelectedIndex(nextIndex);
   };
 
-  const isToday = (date: Date) => {
-    const today = new Date();
-    return (
-      date.getFullYear() === today.getFullYear() &&
-      date.getMonth() === today.getMonth() &&
-      date.getDate() === today.getDate()
-    );
+  const closeModal = () => {
+    setNowSelectedSpeakerId(-1);
   };
 
   return (
@@ -77,7 +74,7 @@ export default function App() {
           subtitle="세션 정보"
         >
           <Tab changeTab={changeTab} json={sessionInfo} />
-          <div className="flex-1">
+          <div className="flex-1 relative">
             <h4 className="font-proxima text-3xl sm:text-2xl font-extrabold leading-9 sm:leading-7 mt-10">
               SESSION #{selectedIndex + 1}
               <br />
@@ -92,7 +89,16 @@ export default function App() {
               </div>
               <div>
                 <ul className="font-medium">
-                  {sessionInfo[selectedIndex].moderator}
+                  <li
+                    className="cursor-pointer border-b-2 border-b-white hover:border-b-black transition ease-out inline-block"
+                    onClick={() => {
+                      setNowSelectedSpeakerId(
+                        sessionInfo[selectedIndex].moderator.id
+                      );
+                    }}
+                  >
+                    {sessionInfo[selectedIndex].moderator.name}
+                  </li>
                 </ul>
               </div>
             </div>
@@ -100,11 +106,13 @@ export default function App() {
               <div className="w-40 font-bold font-proxima sm:mb-2">PANELS</div>
               <ul className="columns-2 sm:columns-1 font-medium h-[96px] sm:h-fit">
                 {sessionInfo[selectedIndex].panels.map(
-                  (panel: string, index: number) => {
+                  (panel: { name: string; id: number }, index: number) => {
                     return (
-                      <li key={index} className="leading-8 w-64">
+                      <li key={index} className="cursor-pointer leading-8 w-64" onClick={() => {
+                        setNowSelectedSpeakerId(panel.id);
+                      }}>
                         <div>
-                          <span>{panel}</span>
+                          <span className="border-b-2 border-b-white hover:border-b-black transition ease-out pb-1">{panel.name}</span>
                         </div>
                       </li>
                     );
@@ -112,6 +120,7 @@ export default function App() {
                 )}
               </ul>
             </div>
+            <Modal speakerId={nowSelectedSpeakerId} closeModal={closeModal} />
           </div>
         </SectionLayout>
         <SectionLayout
@@ -128,10 +137,11 @@ export default function App() {
         >
           <div className="">
             <p className="leading-7 font-medium">
-              PAY IT FORWARD 컨퍼런스의 라이브 스트리밍은 행사
-              당일(2023.10.28.) Zoom을 통해 진행합니다.
+              PAY IT FORWARD 컨퍼런스의 라이브 스트리밍은 행사 당일(2023.10.28.)
+              Zoom을 통해 진행합니다.
               <br />
-              Zoom 회의실 입장 링크는 참가 신청자 대상으로 추후 이메일을 통해 안내드릴 예정입니다.
+              Zoom 회의실 입장 링크는 참가 신청자 대상으로 추후 이메일을 통해
+              안내드릴 예정입니다.
             </p>
           </div>
         </SectionLayout>
