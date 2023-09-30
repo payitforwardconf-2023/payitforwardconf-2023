@@ -10,6 +10,8 @@ import sessionInfo from "./data/session-info";
 import timeTable from "./data/time-table";
 
 export default function App() {
+  require('dotenv').config();
+  
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [nowSelectedSpeakerId, setNowSelectedSpeakerId] = useState(-1);
 
