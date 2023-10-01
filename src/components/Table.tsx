@@ -21,11 +21,11 @@ export default function Table({ json }: Props) {
                 }
               )}
             >
-              <div className="font-bold w-36 font-proxima text-center px-2">
+              <div className="font-bold w-40 font-proxima text-center px-2">
                 <p>{item.time}</p>
               </div>
-              <div className="font-bold w-72">
-                <p className="mt-1">{item.content}</p>
+              <div className="font-bold w-80">
+                <p className="mt-1 leading-5">{item.content}</p>
                 <p className="font-normal hidden sm:block mt-1 text-sm">{item.more}</p>
               </div>
               <div className="flex-1 sm:hidden">
