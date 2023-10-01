@@ -29,7 +29,7 @@ MS and BS  in Computer Engineering, SNU
         id: 3,
         name: '김기응',
         about: `Prof., AI & Probability Reasoning Lab.
-        Graduate School of AI, KAIST
+Graduate School of AI, KAIST
         
 Researcher, Samsung Adv. Institute of Tech.
 Principal Researcher, Samsung SDS
