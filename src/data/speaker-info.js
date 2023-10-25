@@ -109,7 +109,7 @@ MS and BS in Mechanical Engineering, KAIST
         `
     }, {
         id: 9,
-        name: '윤형필',
+        name: '문형필',
         about: `Prof., RISE(Robotics and Intelligent System Eng.) Lab.
 Dept. of Intelligent Robotics, SKKU
 
