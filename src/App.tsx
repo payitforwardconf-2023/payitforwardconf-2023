@@ -183,6 +183,11 @@ export default function App() {
           </div>
         </SectionLayout>
       </div>
+      <footer>
+        <div className="text-slate-400 text-center pt-8 pb-16">
+          <p className="text-xs">Designed & Developed by <a href="https://github.com/mori8" target="_blank" className="underline">Suyeon Nam (@mori8)</a></p>
+        </div>
+      </footer>
     </div>
   );
 }
