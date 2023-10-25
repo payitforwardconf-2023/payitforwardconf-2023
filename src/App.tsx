@@ -5,6 +5,7 @@ import SectionLayout from "./components/SectionLayout";
 import Tab from "./components/Tab";
 import Table from "./components/Table";
 import Modal from "./components/Modal";
+import FixedButton from "./components/FixedButton";
 
 import sessionInfo from "./data/session-info";
 import timeTable from "./data/time-table";
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <div id="wrap" className="font-pretendard">
       <Navigator />
+      <a href="https://docs.google.com/presentation/d/1amXERB8fMDcsZ2ponc--ABPw0kRGzy6gLMHjFmK6mSo/edit?usp=sharing" target="_blank"><FixedButton>컨퍼런스 브로셔 보러 가기 →</FixedButton></a>
       <div id="container">
         <div
           id="main"
