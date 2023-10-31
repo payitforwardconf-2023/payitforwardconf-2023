@@ -248,20 +248,6 @@ BS in Applied Mathematics, KAIST
         `
     }, {
         id: 19,
-        name: '류중희',
-        about: `Partner & CEO, FuturePlay
-
-Strategic Planner, Intel Corporation
-Founder & CEO, Olaworks, Inc.
-Ph.D. in Electrical Engineering, KAIST
-MS and BS in Electrical Engineering, KAIST
-        `,
-        bio: `류중희 대표는 창조하는 삶을 실천하는 기업가로써, 기술창업기업 아이콘랩과 올라웍스를 직접 창업하였다. 특히 두 번째 회사인 올라웍스 사를 미국 인텔에 매각하고 상무로 재직하면서 글로벌 기업도 경험한 바 있다.
-
-이후 창업을 꿈꾸는 기업가들이 꿈을 실현하는데 도움을 주기 위하여 초기 투자 및 인큐베이팅 기업 퓨쳐플레이를 창업하고 (2014), 지난 10년간 누적 1,128억원의 투자를 통해 다수의 기업을  IPO 및 M&A 단계로 성장시키며 기술창업 생태계를 이끌고 있다. 
-        `
-    }, {
-        id: 20,
         name: '김준환',
         about: `CEO, Stradvision
 CEO, Jewoo Investment, Co.
@@ -276,6 +262,20 @@ BS in Computer Science, KAIST
         bio: `김준환 대표는 기술창업분야 전문가로서 올라웍스를 공동 창업하고 인텔에 매각한 경험이 있으며, 이후 자율주행용 카메라 인식 소프트웨어를 개발하는 스트라드비전 사를 설립하고 대표이사로 활동하고 있다.
 
 글로벌 시장을 목표로 자율주행 시대를 가능케 하기 위한 핵심 기술을 개발하면서 미래를 직접 창조해가고 있다. 기술력을 바탕으로 글로벌 자동차 업계 뿐만 아니라 엔비디아, 텍사스 인스트루먼트 등 반도체 제조사와도 협업을 만들어가며 성장하고 있다.
+        `
+    }, {
+        id: 20,
+        name: '류중희',
+        about: `Partner & CEO, FuturePlay
+
+Strategic Planner, Intel Corporation
+Founder & CEO, Olaworks, Inc.
+Ph.D. in Electrical Engineering, KAIST
+MS and BS in Electrical Engineering, KAIST
+        `,
+        bio: `류중희 대표는 창조하는 삶을 실천하는 기업가로써, 기술창업기업 아이콘랩과 올라웍스를 직접 창업하였다. 특히 두 번째 회사인 올라웍스 사를 미국 인텔에 매각하고 상무로 재직하면서 글로벌 기업도 경험한 바 있다.
+
+이후 창업을 꿈꾸는 기업가들이 꿈을 실현하는데 도움을 주기 위하여 초기 투자 및 인큐베이팅 기업 퓨쳐플레이를 창업하고 (2014), 지난 10년간 누적 1,128억원의 투자를 통해 다수의 기업을  IPO 및 M&A 단계로 성장시키며 기술창업 생태계를 이끌고 있다. 
         `
     }, {
         id: 21,
